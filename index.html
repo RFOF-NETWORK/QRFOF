@@ -8,12 +8,31 @@
     <script src="https://tailwindcss.com"></script>
     <!-- SIP.js für serverlose WebRTC-Telefonie -->
     <script src="https://cloudflare.com"></script>
-    <style>
+        <style>
+        /* Nativer Fallback: Verhindert radikal das Überlagern aller 4 Ansichten, selbst ohne Tailwind-Laden */
+        .hidden { display: none !important; }
+        
+        /* Eingabefelder-Optimierung für Mobilgeräte: Verhindert unsichtbaren Text */
+        input, select {
+            color: #101827 !important; /* Macht eingegebenen Text dunkel und lesbar */
+            background-color: #ffffff !important; /* Weißer Hintergrund für Eingabemasken */
+            margin-bottom: 8px;
+            padding: 6px;
+            border-radius: 4px;
+        }
+        
+        /* Visuelle Blockchain-Effekte und Hintergrund-Verschlüsselungs-Tiefe */
         .crypto-gradient { background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%); }
         .glow-green { box-shadow: 0 0 15px rgba(34, 197, 94, 0.2); }
         .glow-red { box-shadow: 0 0 15px rgba(239, 68, 68, 0.2); }
-        body { font-family: monospace; }
+        
+        /* Globale System-Schriftart und Abstände */
+        body { 
+            font-family: monospace; 
+            padding: 10px; 
+        }
     </style>
+
 </head>
 <body class="crypto-gradient text-slate-100 min-h-screen flex flex-col justify-between">
 
